@@ -4,6 +4,15 @@
 
 <h1>Welcome to a flask app</h1>
 
-{{ message }}
+<form>
+<label for="cars">Pick a user</label>
+<select>
+{% for name,email in users %}
+
+<option>{{name}} - {{email}}</option>
+
+{% endfor %}
+</select>
+</form>
 
 {% endblock %}
